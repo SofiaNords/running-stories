@@ -6,4 +6,4 @@ def my_story(request):
         'message': "Hello, hello!",
     }
 
-    return render(request, 'index.html', context)
+    return render(request, 'stories/index.html', context)
