@@ -5,7 +5,6 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 class Story(models.Model):
-    story_id = models.IntegerField(unique=True)
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
