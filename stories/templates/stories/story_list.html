@@ -4,4 +4,12 @@
 
 <p>Här ska meddelandet visas och kommer från index.html:{{ message }}</p>
 
+{% for story in story_list %}
+
+{{ story.title }}
+
+{{ story.content }}
+
+{% endfor %}
+
 {% endblock %}

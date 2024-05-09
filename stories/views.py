@@ -1,9 +1,8 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import Story
 
 # Create your views here.
-def my_story(request):
-    context = {
-        'message': "Hello, hello!",
-    }
-
-    return render(request, 'stories/index.html', context)
+class StoryList(generic.ListView):
+    queryset = Story.objects.all()
+    template_name = "story_list.html"
