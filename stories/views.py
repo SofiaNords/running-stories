@@ -5,4 +5,4 @@ from .models import Story
 # Create your views here.
 class StoryList(generic.ListView):
     queryset = Story.objects.all()
-    template_name = "story_list.html"
+    template_name = 'stories/story_list.html'
