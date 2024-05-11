@@ -1,17 +1,32 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
-<p>Gör en ändring för DEBUG FAlse</p>
+<!-- story_list.html content starts here -->
+<div class="container-fluid">
+    <div class="row">
 
-<p>Här ska stories visas:</p>
+        <img src="{% static 'img/hero_img.webp' %}">
 
-{% for story in story_list %}
+        <!-- Story Entries Column -->
+        <div class="col-9 mt-3 left">
+            <div class="row">
+                {% for story in story_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ story.title }}</h2>
+                            <p class="card-text">{{ story.content }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 
-{{ story.title }}
 
-{{ story.content }}
-
-{% endfor %}
+</div>
 
 {% endblock %}
