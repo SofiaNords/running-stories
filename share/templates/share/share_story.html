@@ -1,7 +1,22 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-<p>Detta är Share your story sidan</p>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h1>Share your Story!</h1>
+            <form method="post">
+                {{ share_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" , name="save">Create New</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
 
 {% endblock %}
