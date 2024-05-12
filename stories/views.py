@@ -6,7 +6,7 @@ from .forms import CreateNewStory
 # Create your views here.
 class StoryList(generic.ListView):
     queryset = Story.objects.all()
-    template_name = 'stories/story_list.html'
+    template_name = 'stories/index.html'
 
 
 
