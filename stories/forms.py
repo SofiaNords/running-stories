@@ -1,4 +1,4 @@
-from stories.models import Story
+from .models import Story
 from django import forms
 
 class CreateNewStory(forms.ModelForm):

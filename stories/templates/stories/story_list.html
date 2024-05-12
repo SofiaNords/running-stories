@@ -7,13 +7,13 @@
 <div class="container-fluid">
     <div class="row">
 
-        <img src="{% static 'img/hero_img.webp' %}">
+        <img src="{% static 'img/hero_image_1.webp' %}">
 
         <!-- Story Entries Column -->
-        <div class="col-9 mt-3 left">
+        <div class="col-12 mt-4 left">
             <div class="row">
                 {% for story in story_list %}
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
                             <h2 class="card-title">{{ story.title }}</h2>
