@@ -10,6 +10,7 @@ class Story(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='stories_written'
     )
+    excerpt = models.TextField(blank=True)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
