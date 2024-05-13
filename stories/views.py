@@ -21,16 +21,13 @@ def story_detail(request, slug):
 
 def share_story(request):
     if request.method == 'POST':
-        print("är metoden post")
         share_form = CreateNewStory(request.POST)
         if share_form.is_valid():
-            print("är formuläret giltigt?")
             new_story = share_form.save(commit=False)
             new_story.author = request.user
             new_story.slug = slugify(new_story.title)
             new_story.save()
-            print("sparas det?")
-            return redirect('home')
+            return redirect('share')
     else:
         share_form = CreateNewStory()
 
