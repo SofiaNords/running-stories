@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.utils.text import slugify
 from .models import Story
 from .forms import CreateNewStory
 
@@ -19,9 +20,20 @@ def story_detail(request, slug):
     )
 
 def share_story(request):
-    share_form = CreateNewStory()
+    if request.method == 'POST':
+        print("är metoden post")
+        share_form = CreateNewStory(request.POST)
+        if share_form.is_valid():
+            print("är formuläret giltigt?")
+            new_story = share_form.save(commit=False)
+            new_story.author = request.user
+            new_story.slug = slugify(new_story.title)
+            new_story.save()
+            print("sparas det?")
+            return redirect('home')
+    else:
+        share_form = CreateNewStory()
 
     return render(
-        request, 'stories/share_story.html', {"share_form": share_form,}
+        request, 'stories/share_story.html', {"share_form": share_form}
     )
-
