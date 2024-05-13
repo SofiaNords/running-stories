@@ -6,9 +6,15 @@ from .models import Story
 from .forms import CreateNewStory
 
 # Create your views here.
+# class StoryList(generic.ListView):
+#     queryset = Story.objects.all()
+#     template_name = 'stories/index.html'
+
 class StoryList(generic.ListView):
     queryset = Story.objects.all()
     template_name = 'stories/index.html'
+    context_object_name = 'story_list'
+
 
 def story_detail(request, slug):
     queryset = Story.objects.filter(status=1)
@@ -25,10 +31,10 @@ def share_story(request):
     if request.method == 'POST':
         share_form = CreateNewStory(request.POST)
         if share_form.is_valid():
-            new_story = share_form.save(commit=False)
-            new_story.author = request.user
-            new_story.slug = slugify(new_story.title)
-            new_story.save()
+            story = share_form.save(commit=False)
+            story.author = request.user
+            story.slug = slugify(story.title)
+            story.save()
             return redirect('share')
     else:
         share_form = CreateNewStory()
