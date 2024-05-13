@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Story title goes in these h1 tags -->
+            <h1 class="story-title">{{ story.title }}</h1>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

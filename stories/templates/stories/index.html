@@ -16,8 +16,10 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h2 class="card-title">{{ story.title }}</h2>
-                            <p class="card-text">{{ story.excerpt }}</p>
+                            <a href="{% url 'story_detail' story.slug %}" class="post-link">
+                                <h2 class="card-title">{{ story.title }} | {{ story.author }}</h2>
+                                <p class="card-text">{{ story.excerpt }}</p>
+                            </a>
                         </div>
                     </div>
                 </div>
