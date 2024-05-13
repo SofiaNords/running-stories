@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.utils.text import slugify
@@ -19,6 +20,7 @@ def story_detail(request, slug):
         {"story": story},
     )
 
+@login_required
 def share_story(request):
     if request.method == 'POST':
         share_form = CreateNewStory(request.POST)
