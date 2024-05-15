@@ -1,7 +1,12 @@
 const editButtons = document.getElementsByClassName("btn-edit");
-const commentText = document.getElementById("id_body");
-const commentForm = document.getElementById("storyForm");
+const storyText = document.getElementById("id_content");
+const storyTitle = document.getElementById("id_title");
+const storyForm = document.getElementById("storyForm");
 const submitButton = document.getElementById("submitButton");
+
+const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+const deleteButtons = document.getElementsByClassName("btn-delete");
+const deleteConfirm = document.getElementById("deleteConfirm");
 
 /**
 * Initializes edit functionality for the provided edit buttons.
@@ -17,9 +22,11 @@ for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let storyId = e.target.getAttribute("story_id");
     let storyContent = document.getElementById(`story${storyId}`).innerText;
-    commentText.value = commentContent;
+    storyText.value = storyContent;
+    let storyTitle = document.getElementById(`story${storyId}`).innerText;
+    storyTitle.value = storyTitle;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_story/${storyId}`);
+    storyForm.setAttribute("action", `edit_story/${storyId}`);
   });
 }
 
@@ -36,7 +43,7 @@ for (let button of editButtons) {
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
       let storyId = e.target.getAttribute("story_id");
-      deleteConfirm.href = `delete_comment/${storyId}`;
+      deleteConfirm.href = `story_delete/${storyId}`;
       deleteModal.show();
     });
   }
