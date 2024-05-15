@@ -1,1 +1,0 @@
-console.log("Kan du se console.log meddelandet här?");
