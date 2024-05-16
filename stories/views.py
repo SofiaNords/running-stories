@@ -4,8 +4,20 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
-from .models import Story
+from .models import Story, About
 from .forms import CreateNewStory
+
+def about(request):
+    """
+    Renders the About page
+    """
+    about = About.objects.all().order_by('-updated_on').first()
+
+    return render(
+        request,
+        "stories/about.html",
+        {"about": about},
+    )
 
 class StoryList(generic.ListView):
     """
