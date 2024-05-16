@@ -1,6 +1,6 @@
 const editButtons = document.getElementsByClassName("btn-edit");
 const storyText = document.getElementById("id_content");
-const storyTitle = document.getElementById("id_title");
+const storyTitle = document.getElementById("title");
 const storyForm = document.getElementById("storyForm");
 const submitButton = document.getElementById("submitButton");
 

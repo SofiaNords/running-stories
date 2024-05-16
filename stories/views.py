@@ -14,6 +14,7 @@ class StoryList(generic.ListView):
     queryset = Story.objects.all() # Queryset to retrieve all Story objects
     template_name = 'stories/index.html' # Template file for rendering the view
     context_object_name = 'story_list' # Name of the context variable in the template
+    paginate_by = 4
 
 
 def story_detail(request, slug):

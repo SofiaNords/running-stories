@@ -6,68 +6,71 @@
 
 <!-- share_story.html content starts here -->
 <div class="container-fluid">
-    <div class="row">
-       
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Share your Story -->
-                    <h1>Share your Story!</h1>
-                    <form id="storyForm" method="post">
-                        {{ share_form | crispy }}
-                        {% csrf_token %}
-                        <button type="submit" , name="save">Create New</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <!-- My Stories -->
-                    <h1>My stories</h1>
-                    {% for story in my_stories %}
-                    {% if story.author == user %}
-                    <div>
-                        <div class="card mb-4">
-                            <div id="story{{ story.id }}" class="card-body">
-                                <h2 class="card-title">{{ story.title }} | {{ story.author }}</h2>
-                                <p class="card-text">{{ story.excerpt }}</p>
-                                <p class="card-text">{{ story.content }}</p>
-                            </div>
-                        </div>
-                        <button class="btn btn-delete" story_id="{{ story.id }}">Delete</button>
-                        <button class="btn btn-edit" story_id="{{ story.id }}">Edit</button>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
+  <div class="row">
+
+    <div class="col-12 mt-3 left ">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <!-- Share your Story -->
+          <h1>Share your Story!</h1>
+          <form id="storyForm" method="post">
+            {{ share_form | crispy }}
+            {% csrf_token %}
+            <div class="text-center">
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg btn-success">
+              Save</button>
             </div>
+          </form>
         </div>
+        <div class="col-md-5">
+          <!-- My Stories -->
+          <h1>My stories</h1>
+          {% for story in my_stories %}
+          {% if story.author == user %}
+          <div>
+            <div class="card mb-2">
+              <div class="card-body">
+                <h2 id="story{{ story.id }}" class="card-title">{{ story.title }} | {{ story.author }}</h2>
+                <p class="card-text">{{ story.excerpt }}</p>
+                <p id="story{{ story.id }}" class="card-text">{{ story.content }}</p>
+              </div>
+            </div>
+            <div class="mb-4 text-center">
+              <button class="btn btn-delete btn-danger" story_id="{{ story.id }}">Delete</button>
+              <button class="btn btn-edit btn-secondary" story_id="{{ story.id }}">Edit</button>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div class="col-md-1"></div>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete your comment?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
       </div>
     </div>
   </div>
 
-{% endblock %}
+  {% endblock %}
 
-{% block extras %}
-<script src="{% static 'js/stories.js' %}"></script>
-{% endblock %}
+  {% block extras %}
+  <script src="{% static 'js/stories.js' %}"></script>
+  {% endblock %}
