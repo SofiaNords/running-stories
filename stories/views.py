@@ -4,8 +4,8 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
-from .models import Story, About
-from .forms import CreateNewStory
+from .models import Story, About, Comment
+from .forms import CreateNewStory, CommentForm
 
 def about(request):
     """
@@ -35,11 +35,32 @@ def story_detail(request, slug):
     """
     queryset = Story.objects.filter(status=1) # Queryset to retrieve Story objects with status=1
     story = get_object_or_404(queryset, slug=slug) # Get the Story object with the specified slug
+    comments = story.comments.all().order_by("-created_on")
+    comment_count = story.comments.filter(approved=True).count(
+    )
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.story = story
+            comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval'
+            )
+
+    comment_form = CommentForm()
 
     return render(
         request,
         "stories/story_detail.html", # Template file for rendering the view
-        {"story": story},  # Context variable containing the Story object
+        {"story": story,
+        "comments": comments,
+        "comment_count": comment_count,
+        "comment_form": comment_form,
+        },  # Context variable containing the Story object
     )
 
 @login_required
@@ -64,6 +85,7 @@ def share_story(request):
         request, 'stories/share_story.html', {"share_form": share_form, "my_stories": my_stories}
     )
 
+@login_required
 def story_edit(request, story_id):
     """
     View to edit story
@@ -85,6 +107,7 @@ def story_edit(request, story_id):
 
     return HttpResponseRedirect(reverse('share'))
 
+@login_required
 def story_delete(request, story_id):
     """
     view to delete story
