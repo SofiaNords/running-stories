@@ -1,8 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
-{{ about.title }}
+<div class="container mt-5">
+    <div class="row">
+        <h2>{{ about.title }}</h2>
+        {{ about.content | safe }}
+    </div>
+</div>
+
+
 
 {% endblock %}
