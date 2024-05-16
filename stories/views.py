@@ -46,10 +46,6 @@ def story_detail(request, slug):
             comment.author = request.user
             comment.story = story
             comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
-            )
 
     comment_form = CommentForm()
 
