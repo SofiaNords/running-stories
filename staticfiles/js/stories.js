@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const editButtons = document.getElementsByClassName("btn-edit");
-  const titleElement = document.getElementById("id_title");
-  const excerptElement = document.getElementById("id_excerpt");
-  const contentElement = document.getElementById("id_content");
+  const titleStory = document.getElementById("title");
+  const excerptStory = document.getElementById("excerpt");
+  const contentStory = document.getElementById("content");
 
   const storyForm = document.getElementById("storyForm");
   const submitButton = document.getElementById("submitButton");
@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
   for (let button of editButtons) {
     button.addEventListener("click", (e) => {
       let storyId = e.target.getAttribute("story_id");
-      let storyTitle = document.getElementById(`story${storyId}`).innerText;
-      titleElement.value = storyTitle
-      storyExcerpt = document.getElementById(`storyExcerpt${storyId}`).innerText;
-      excerptElement.value = storyExcerpt;
-      let storyContent = document.getElementById(`storyContent${storyId}`).innerText;
-      contentElement.value = storyContent;
+      let storyTitleText = document.getElementById(`storyTitle${storyId}`).innerText;
+      titleStory.value = storyTitleText;
+      let storyExcerptText = document.getElementById(`storyExcerpt${storyId}`).innerText;
+      excerptStory.value = storyExcerptText;
+      let storyContentText = document.getElementById(`storyContent${storyId}`).innerText;
+      contentStory.value = storyContentText;
       submitButton.innerText = "Update";
       storyForm.setAttribute("action", `edit_story/${storyId}`);
     });

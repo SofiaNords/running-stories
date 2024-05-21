@@ -1,0 +1,10 @@
+body {
+    background-color: aquamarine;
+}
+
+
+.story-link {
+    text-decoration: none;
+    color: #445261;
+    background-color: blueviolet;
+}
