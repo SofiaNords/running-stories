@@ -29,14 +29,14 @@
     </div>
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
-        <li>
+        <button class="button">
             <a href="?page={{ page_obj.previous_page_number }}" class="story-link">&laquo; PREV</a>
-        </li>
+        </button>
         {% endif %}
         {% if page_obj.has_next %}
-        <li>
+        <button class="button">
             <a href="?page={{ page_obj.next_page_number }}" class="story-link">NEXT &raquo;</a>
-        </li>
+        </button>
         {% endif %}
     </ul>
 </div>

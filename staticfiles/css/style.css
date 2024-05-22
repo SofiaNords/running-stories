@@ -17,6 +17,22 @@ body {
 
 .story-link {
     text-decoration: none;
-    color: #445261;
-    background-color: blueviolet;
+    color: #062D46;
 }
+
+#pag-button {
+    color: white;
+}
+
+.button {
+    background-color: #6B9776;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
