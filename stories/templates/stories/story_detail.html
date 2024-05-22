@@ -25,7 +25,7 @@
                 <form id="commentForm" method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg button">Submit</button>
                 </form>
                 {% else %}
                 <p>Log in to leave a comment</p>
@@ -51,8 +51,8 @@
                             {{ comment.body | linebreaks }}
                         </div>
                         {% if user.is_authenticated and comment.author == user %}
-                        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                        <button class="btn btn-delete btn-danger" comment_id="{{ comment.id }}">Delete</button>
+                        <button class="btn btn-edit btn-secondary" comment_id="{{ comment.id }}">Edit</button>
                         {% endif %}
                     </div>
                     <!-- Our for loop ends here -->
