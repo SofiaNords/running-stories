@@ -20,6 +20,10 @@ body {
     color: #062D46;
 }
 
+.pag-link {
+    color: white;
+}
+
 .button {
     background-color: #6B9776;
     border: none;

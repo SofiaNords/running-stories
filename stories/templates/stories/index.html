@@ -30,12 +30,12 @@
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <button class="button">
-            <a href="?page={{ page_obj.previous_page_number }}" class="story-link">&laquo; PREV</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="pag-link">&laquo; PREV</a>
         </button>
         {% endif %}
         {% if page_obj.has_next %}
         <button class="button">
-            <a href="?page={{ page_obj.next_page_number }}" class="story-link">NEXT &raquo;</a>
+            <a href="?page={{ page_obj.next_page_number }}" class="pag-link">NEXT &raquo;</a>
         </button>
         {% endif %}
     </ul>
