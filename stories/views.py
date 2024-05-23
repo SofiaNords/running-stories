@@ -34,7 +34,9 @@ def story_detail(request, slug):
     View to view the story posts in detail
     """
     queryset = Story.objects.filter(status=1) # Queryset to retrieve Story objects with status=1
+    print("Visa alla stories")
     story = get_object_or_404(queryset, slug=slug) # Get the Story object with the specified slug
+    print("gå till storyn med rätt slug")
     comments = story.comments.all().order_by("-created_on")
     comment_count = story.comments.filter(approved=True).count(
     )
@@ -89,15 +91,23 @@ def story_edit(request, story_id):
     if request.method == "POST":
 
         queryset = Story.objects.filter(status=1)
+        print("Collection of stories")
         story = get_object_or_404(Story, pk=story_id)
+        print("Get object")
         share_form = CreateNewStory(data=request.POST, instance=story)
+        print("Create new story")
 
         if share_form.is_valid() and story.author == request.user:
             story = share_form.save(commit=False)
+            print("Save later")
             story.author = request.user
+            print("författaren = användare")
             story.slug = slugify(story.title)
+            print("Slug")
             story.save()
+            print("Spara")
             messages.add_message(request, messages.SUCCESS, 'Story Updated!')
+            print("Storyn är uppdatderad!")
         else:
             messages.add_message(request, messages.ERROR, 'Error updating story!')
 
