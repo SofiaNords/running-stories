@@ -26,3 +26,11 @@
 
 - [Balsamiq](https://balsamiq.cloud/) - Used to create wireframes
 - [Lucidchart](https://www.lucidchart.com/) - Used to create Entity Relationship Diagrams (ERD)
+
+
+## Credits
+
+### Code Used
+
+- [How to keep your footer where it belongs?](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) by Dominic Fraser. I followed Dominics instruction for the placement of the footer.
+
