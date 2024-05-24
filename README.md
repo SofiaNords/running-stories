@@ -6,6 +6,10 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 .... Add Am I responsive image
 
+## User Experience - UX
+
+
+
 ## Project planning
 
 ### Wireframes
@@ -35,6 +39,10 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 - [Balsamiq](https://balsamiq.cloud/) - Used to create wireframes
 - [Lucidchart](https://www.lucidchart.com/) - Used to create Entity Relationship Diagrams (ERD)
 
+
+## Testing
+
+View testing User Stories [here.](https://docs.google.com/spreadsheets/d/16GrrTfA8aQ79KI6y7XLdAuZSGlR_fDgHIUbQLkWweuM/edit#gid=0)
 
 ## Credits
 
