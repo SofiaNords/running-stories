@@ -1,3 +1,11 @@
+# Running Stories
+
+A platform for runners to share their unique experiences, inspire one another, and build community. This is a Full Stack website built using the Django framework. Users can share their stories and comment on others’ stories, expressing their passion for running.
+
+View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/).
+
+.... Add Am I responsive image
+
 ## Project planning
 
 ### Wireframes
