@@ -33,6 +33,12 @@
                 <h2 id="story{{ story.id }}" class="card-title">{{ story.title }}</h2>
                 <p id="storyExcerpt{{ story.id }}" class="card-text">{{ story.excerpt }}</p>
                 <p id="storyContent{{ story.id }}" class="card-text">{{ story.content }}</p>
+                <p>Created: {{ story.created_on }}</p>
+                {% if story.status == 0 %}
+                <p>Draft</p>
+                {% else %}
+                <p>Published</p>
+                {% endif %}
               </div>
             </div>
             <div class="mb-4 text-center">
