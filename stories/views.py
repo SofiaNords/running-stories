@@ -25,8 +25,8 @@ class StoryList(generic.ListView):
     """
     View to display a list of stories
     """
-    # Queryset containing all Story objects
-    queryset = Story.objects.all()
+    # Get all published stories (status=1)
+    queryset = Story.objects.filter(status=1)
     # Template to render for this view
     template_name = 'stories/index.html'
     # Name of the context variable in the template
