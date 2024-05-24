@@ -45,9 +45,6 @@ def story_detail(request, slug):
     story = get_object_or_404(queryset, slug=slug) 
     # Get all comments for this story, ordered by creation date
     comments = story.comments.all().order_by("-created_on")
-    # Count the number of approved comments
-    comment_count = story.comments.filter(approved=True).count(
-    )
 
     # Handle form submission for adding new comments
     if request.method == "POST":
@@ -67,7 +64,6 @@ def story_detail(request, slug):
         "stories/story_detail.html", 
         {"story": story,
         "comments": comments,
-        "comment_count": comment_count,
         "comment_form": comment_form,
         }, 
     )
@@ -175,8 +171,6 @@ def comment_edit(request, slug, comment_id):
             comment = comment_form.save(commit=False)
             # Associating the comment with the fetched story
             comment.story = story
-            # Setting the comment as not approved
-            comment.approved = False
             # Saving the comment to the database
             comment.save()
             # Displaying a success message
