@@ -30,6 +30,12 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 <img src="static/img/wireframe_8.png">
 
+### Entity Relationship Diagrams
+
+<img src="static/img/erd_1.png">
+
+<img src="static/img/erd_2.png">
+
 
 ## Technologies Used
 
