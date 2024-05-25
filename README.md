@@ -12,6 +12,20 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 ## Project planning
 
+### Agile Methodologies 
+
+#### Kanban Board
+
+<img src="static/img/kanban.png">
+
+#### MoSCoW Prioritization
+
+#### Milstones
+
+#### Epics
+
+#### User Stories
+
 ### Wireframes
 
 <img src="static/img/wireframe_1.png">
