@@ -20,6 +20,16 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 #### MoSCoW Prioritization
 
+The User Stories are labeled with one of the following categories according to the MoSCoW prioritization method:
+
+- Must Have: Requirements that are absolutely necessary for the product to function. These have the highest priority.
+
+- Should Have: Important requirements that should be included if possible, but they are not critical.
+
+- Could Have: Desirable requirements that can be added if time and resources allow.
+
+- Won’t Have (this time): Requirements that will not be included in the current version of the product.
+
 #### Milstones
 
 #### Epics
