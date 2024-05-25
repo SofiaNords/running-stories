@@ -14,6 +14,22 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 ### Wireframes
 
+<img src="static/img/wireframe_1.png">
+
+<img src="static/img/wireframe_2.png">
+
+<img src="static/img/wireframe_3.png">
+
+<img src="static/img/wireframe_4.png">
+
+<img src="static/img/wireframe_5.png">
+
+<img src="static/img/wireframe_6.png">
+
+<img src="static/img/wireframe_7.png">
+
+<img src="static/img/wireframe_8.png">
+
 
 ## Technologies Used
 
@@ -38,7 +54,6 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 - [Balsamiq](https://balsamiq.cloud/) - Used to create wireframes
 - [Lucidchart](https://www.lucidchart.com/) - Used to create Entity Relationship Diagrams (ERD)
-
 
 ## Testing
 
