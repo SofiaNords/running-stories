@@ -32,9 +32,15 @@ The User Stories are labeled with one of the following categories according to t
 
 #### Milstones
 
+<img src="static/img/milstones.png">
+
 #### Epics
 
+<img src="static/img/epics.png">
+
 #### User Stories
+
+<img src="static/img/user_stories.png">
 
 ### Wireframes
 
