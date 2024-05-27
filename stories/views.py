@@ -7,6 +7,7 @@ from django.utils.text import slugify
 from .models import Story, About, Comment
 from .forms import CreateNewStory, CommentForm
 
+
 def about(request):
     """
     Renders the About page
@@ -20,6 +21,7 @@ def about(request):
         "stories/about.html",
         {"about": about},
     )
+
 
 class StoryList(generic.ListView):
     """
@@ -42,7 +44,7 @@ def story_detail(request, slug):
     # Get all published stories (status=1)
     queryset = Story.objects.filter(status=1)
     # Retrieve the story with the specified slug
-    story = get_object_or_404(queryset, slug=slug) 
+    story = get_object_or_404(queryset, slug=slug)
     # Get all comments for this story, ordered by creation date
     comments = story.comments.all().order_by("-created_on")
 
@@ -61,12 +63,14 @@ def story_detail(request, slug):
     # Render the "story_detail.html" template with relevant data
     return render(
         request,
-        "stories/story_detail.html", 
-        {"story": story,
-        "comments": comments,
-        "comment_form": comment_form,
-        }, 
+        "stories/story_detail.html",
+        {
+            "story": story,
+            "comments": comments,
+            "comment_form": comment_form,
+        },
     )
+
 
 @login_required
 def share_story(request):
@@ -93,8 +97,12 @@ def share_story(request):
 
     # Render the 'share_story.html' template with relevant data
     return render(
-        request, 'stories/share_story.html', {"share_form": share_form, "my_stories": my_stories}
+        request, 'stories/share_story.html', {
+            "share_form": share_form,
+            "my_stories": my_stories
+            }
     )
+
 
 @login_required
 def story_edit(request, story_id):
@@ -107,7 +115,8 @@ def story_edit(request, story_id):
         queryset = Story.objects.filter(status=1)
         # Fetching the story object based on the story_id
         story = get_object_or_404(Story, pk=story_id)
-        # Creating a new story form with the POST data and the fetched story instance
+        # Creating a new story form with the POST data and the fetched story
+        # instance
         share_form = CreateNewStory(data=request.POST, instance=story)
 
         if share_form.is_valid() and story.author == request.user:
@@ -123,10 +132,13 @@ def story_edit(request, story_id):
             messages.add_message(request, messages.SUCCESS, 'Story Updated!')
         else:
             # Displaying an error message if the form is not valid
-            messages.add_message(request, messages.ERROR, 'Error updating story!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating story!'
+                )
 
     # Redirecting to the 'share' view
     return HttpResponseRedirect(reverse('share'))
+
 
 @login_required
 def story_delete(request, story_id):
@@ -145,7 +157,9 @@ def story_delete(request, story_id):
         messages.add_message(request, messages.SUCCESS, 'Story deleted!')
     else:
         # Displaying an error message if the current user is not the author
-        messages.add_message(request, messages.ERROR, 'You can only delete your own stories!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own stories!'
+        )
 
     # Redirecting to the 'share' view
     return HttpResponseRedirect(reverse('share'))
@@ -158,12 +172,13 @@ def comment_edit(request, slug, comment_id):
     if request.method == "POST":
 
         # Collecting stories with status 1
-        queryset =Story.objects.filter(status=1)
+        queryset = Story.objects.filter(status=1)
         # Fetching the story object based on the slug
         story = get_object_or_404(queryset, slug=slug)
         # Fetching the comment object based on the comment_id
         comment = get_object_or_404(Comment, pk=comment_id)
-        # Creating a new comment form with the POST data and the fetched comment instance
+        # Creating a new comment form with the POST data and the fetched
+        # comment instance
         comment_form = CommentForm(data=request.POST, instance=comment)
 
         if comment_form.is_valid() and comment.author == request.user:
@@ -177,10 +192,13 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
             # Displaying an error message if the form is not valid
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!'
+            )
 
     # Redirecting to the 'story_detail' view with the story slug as an argument
     return HttpResponseRedirect(reverse('story_detail', args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     """
@@ -200,7 +218,9 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
         # Displaying an error message if the current user is not the author
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!'
+        )
 
     # Redirecting to the 'story_detail' view with the story slug as an argument
     return HttpResponseRedirect(reverse('story_detail', args=[slug]))
