@@ -10,7 +10,7 @@ const commentForm = document.getElementById("commentForm");
 // Get the submit button
 const submitButton = document.getElementById("submitButton");
 
-// Create a modal for delete confirmation
+// Create a modal for delete confirmation, globals bootstrap, document
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 
 // Get all delete buttons
