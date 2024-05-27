@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row">
 
-        <img src="{% static 'img/hero_image_1.webp' %}">
+        <img src="{% static 'img/hero_image_1.webp' %}" alt="A man running in the Alps">
 
         <!-- Story Entries Column -->
         <div class="col-12 mt-4 left">
@@ -29,14 +29,14 @@
     </div>
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
-        <button class="button">
+        <li class="button">
             <a href="?page={{ page_obj.previous_page_number }}" class="pag-link">&laquo; PREV</a>
-        </button>
+        </li>
         {% endif %}
         {% if page_obj.has_next %}
-        <button class="button">
+        <li class="button">
             <a href="?page={{ page_obj.next_page_number }}" class="pag-link">NEXT &raquo;</a>
-        </button>
+        </li>
         {% endif %}
     </ul>
 </div>
