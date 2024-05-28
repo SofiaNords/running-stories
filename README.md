@@ -1,6 +1,6 @@
 # Running Stories
 
-A platform for runners to share their unique experiences, inspire one another, and build community. This is a Full Stack website built using the Django framework. Users can share their stories and comment on others’ stories, expressing their passion for running.
+A platform for runners to share their unique experiences, inspire one another, and build community. This is a Full Stack website built using the Django framework with full CRUD functionality. Users can share their stories and comment on others’ stories, expressing their passion for running.
 
 View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/).
 
@@ -11,79 +11,119 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 ### User Stories
 
 1. User Registration - As a new user, I want to register on the website so that I can create and share my running stories.
-    - Given that I am on the registration page, when I provide valid details (username, email, password), then I should be successfully registered.
-    - Given that I am on the registration page, when I provide invalid or incomplete details, then I should receive an error message indicating the issue.
+    
+    AC1 - Given that I am on the registration page, when I provide valid details (username, email, password), then I should be successfully registered.
+
+    AC2 - Given that I am on the registration page, when I provide invalid or incomplete details, then I should receive an error message indicating the issue.
 
 2. Create a Running Story - As a registered user, I want to create a running story to share my experiences.
-    - Given that I am logged in, when I navigate to the “Share Story” page, then I should see a form to input my story details (title, content).
-    - Given that I have filled in the story details, when I submit the form, then my story should be saved and visible to other users.
+
+    AC1 - Given that I am logged in, when I navigate to the “Share Story” page, then I should see a form to input my story details (title, content).
+
+    AC2 - Given that I have filled in the story details, when I submit the form, then my story should be saved and visible to other users.
 
 3. View Running Stories - As a user, I want to view running stories posted by others so that I can get inspired of other runners.
-    - Given that I am on the homepage, then I should see a list of running stories with titles and brief summaries.
-    - Given that I click on a story, then I should be taken to the full story page.
+
+    AC1 - Given that I am on the homepage, then I should see a list of running stories with titles and brief summaries.
+
+    AC2 - Given that I click on a story, then I should be taken to the full story page.
 
 4. Comment on Running Stories - As a user, I want to leave comments on running stories.
-    - Given that I am logged in, when I read a story, then I should see a comment section.
-    - Given that I enter a comment and submit it, then my comment should be visible to others.
+
+    AC1 - Given that I am logged in, when I read a story, then I should see a comment section.
+
+    AC2 - Given that I enter a comment and submit it, then my comment should be visible to others.
 
 5. Edit and Delete Stories - As a story creator, I want to edit or delete my own stories so that I can change or delete the content I posted.
-    - Given that I am logged in and viewing my own story, then I should see options to edit or delete it.
-    - Given that I choose to edit, when I make changes and save, then the story should be updated.
-    - Given that I choose to delete, when I confirm, then the story should be removed.
+
+    AC1 - Given that I am logged in and viewing my own story, then I should see options to edit or delete it.
+
+    AC2 - Given that I choose to edit, when I make changes and save, then the story should be updated.
+    
+    AC3 - Given that I choose to delete, when I confirm, then the story should be removed.
 
 6. Ask Questions - As a runner, I want to ask questions about running so that I can learn from others.
-    - The user can access a form or input field where they can type their running-related question.
-    - Upon submitting the question, it is stored in the database.
-    - The question appears on the website’s question feed or list.
-    - The user receives a confirmation message after submitting the question.
-    - The question form includes validation to prevent empty or invalid submissions.
+    
+    AC1 - The user can access a form or input field where they can type their running-related question.
+    
+    AC2 - Upon submitting the question, it is stored in the database.
+    
+    AC3 - The question appears on the website’s question feed or list.
+    
+    AC4 - The user receives a confirmation message after submitting the question.
+    
+    AC5 - The question form includes validation to prevent empty or invalid submissions.
 
 7. Answer Questions - As a runner, I want to answer questions from fellow runners to share my knowledge and experiences.
-    - The user can view a list of existing questions on the website.
-    - Each question displays the question text and relevant details (e.g., date posted, author).
-    - The user can click on a question to view its details and any existing answers.
-    - The user can submit an answer to a specific question.
-    - After submitting an answer, it appears alongside the question.
-    - The answer form includes validation to prevent empty or invalid submissions.
+    
+    AC1 - The user can view a list of existing questions on the website.
+
+    AC2 - Each question displays the question text and relevant details (e.g., date posted, author).
+
+    AC3 - The user can click on a question to view its details and any existing answers.
+    
+    AC4 - The user can submit an answer to a specific question.
+    
+    AC5 - After submitting an answer, it appears alongside the question.
+    
+    AC6 - The answer form includes validation to prevent empty or invalid submissions.
 
 8. View Questions and Answers - As a user, I want to see questions and answers related to running on the website so that I can participate in discussions.
-    - The website homepage or a dedicated “Questions” section displays a list of recent questions.
-    - Each question shows the question text, author, and the number of answers.
-    - The user can click on a question to view its details and answers.
-    - Answers are displayed below the question, sorted by date (most recent first).
-    - The website provides pagination or infinite scrolling for long lists of questions.
+
+    AC1 - The website homepage or a dedicated “Questions” section displays a list of recent questions.
+    
+    AC2 - Each question shows the question text, author, and the number of answers.
+    
+    AC3 - The user can click on a question to view its details and answers.
+    
+    AC4 - Answers are displayed below the question, sorted by date (most recent first).
+    
+    AC5 - The website provides pagination or infinite scrolling for long lists of questions.
 
 
 9. Visitor View Running Stories - As a visitor, I want to be able to read running stories so that I can be inspired by others’ experiences.
-    - When I visit the website, I should see a list of running stories.
-    - I should be able to click on a story to read its full content.
+    
+    AC1 - When I visit the website, I should see a list of running stories.
+    
+    AC2 - I should be able to click on a story to read its full content.
 
 10. View My Stories - As a user, I want to be able to view my running stories on a single page so that I can easily track my progress and share my experiences with others.
-    - The “My Stories” section should list all the running stories associated with my account.
-    - If I haven’t posted any running stories yet, the section should display a message indicating that there are no stories available.
-    - When I create a new running story, it should appear immediately in the “My Running Stories” section.
-    - The running stories should be sorted in reverse chronological order (most recent first).
+    
+    AC1 - The “My Stories” section should list all the running stories associated with my account.
+    
+    AC2 - If I haven’t posted any running stories yet, the section should display a message indicating that there are no stories available.
+    
+    AC3 - When I create a new running story, it should appear immediately in the “My Running Stories” section.
+    
+    AC4 - The running stories should be sorted in reverse chronological order (most recent first).
 
 11. The About Page - As a website visitor, I want to understand the purpose of the running stories website so that I can engage with the content effectively.
-    - The “About” page prominently displays a brief overview of the website’s purpose.
-    - The content is written in plain language, avoiding technical jargon.
-    - The “About” page provides a link or button to explore more running stories.
-    - The page layout is visually appealing and easy to read.
+    
+    AC1 - The “About” page prominently displays a brief overview of the website’s purpose.
+    
+    AC2 - The content is written in plain language, avoiding technical jargon.
+    
+    AC3 - The “About” page provides a link or button to explore more running stories.
+    
+    AC4 - The page layout is visually appealing and easy to read.
 
 12. Edit and Delete Comments - As a comment creator, I want to be able to edit or delete my own comments so that I can change or delete the content I posted.
-    - Given that I am logged in and viewing my own comment, then I should see options to edit or delete it.
-    - Given that I choose to edit, when I make changes and save, then the comment should be updated.
-    - Given that I choose to delete, when I confirm, then the comment should be removed.
+    
+    AC1 - Given that I am logged in and viewing my own comment, then I should see options to edit or delete it.
+    
+    AC2 - Given that I choose to edit, when I make changes and save, then the comment should be updated.
+    
+    AC3 - Given that I choose to delete, when I confirm, then the comment should be removed.
 
 13. Handle Drafts - As a user, I want to be able to save my stories as drafts so that I can work on them later.
-    - Users should be able to save their stories as drafts.
-    - When editing a story, users should have the option to publish it.
-    - The system should provide a way to view all published stories.
-    - There should be a way to identify stories that are still in draft mode.
-
-
-
-
+    
+    AC1 - Users should be able to save their stories as drafts.
+    
+    AC2 - When editing a story, users should have the option to publish it.
+    
+    AC3 - The system should provide a way to view all published stories.
+    
+    AC4 - There should be a way to identify stories that are still in draft mode.
 
 ## Project planning
 
