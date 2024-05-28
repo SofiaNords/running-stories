@@ -131,6 +131,8 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 #### Kanban Board
 
+I have used the [project board in Git Hub](https://github.com/users/SofiaNords/projects/5/views/1) for my project planning. It has helped me to get an overview of the project and to see the progress. Thanks to the MoSCoW method (see below), I realized quite early in the project that User Story 6, 7 and 8 would not be included in this release.
+
 <img src="static/img/kanban.png">
 
 #### MoSCoW Prioritization
@@ -147,13 +149,18 @@ The User Stories are labeled with one of the following categories according to t
 
 #### Milstones
 
+I also wanted to try using Milstones in Github Projects but realize now in retrospect that for a project of this size, a Kanban Board with User Stories and MoSCoW labels were enough.
+
 <img src="static/img/milstones.png">
 
 #### Epics
 
+Even Epics felt a bit over-ambitious in this project but it has been educational to use it.
 <img src="static/img/epics.png">
 
 #### User Stories
+
+You can access User Stories in Git Hub [here](https://github.com/SofiaNords/running-stories/issues). In the picture below you can see how I have labeled the User Stories with Epics, MoSCoW Prioritization and Milstones.
 
 <img src="static/img/user_stories.png">
 
