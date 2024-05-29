@@ -1,6 +1,6 @@
 # Running Stories - Introduction
 
-A platform for runners to share their unique experiences, inspire one another, and build community. This is a Full Stack website built using the Django framework with full CRUD functionality. Users can share their stories and comment on others’ stories, expressing their passion for running.
+Running Stories is a platform for runners to share their unique experiences, inspire one another, and build community. This is a Full Stack website built using the Django framework with full CRUD functionality. Users can share their stories and comment on others’ stories, expressing their passion for running.
 
 View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/).
 
@@ -8,7 +8,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 ## Table of Content
 
-- [Running Stories](#running-stories---introduction)
+- [Running Stories - Introduction](#running-stories---introduction)
 - [Table of Content](#table-of-content)
 - [User Experience - UX](#user-experience---ux)
     - [User Stories](#user-stories)
@@ -19,9 +19,9 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
             - [Milestones](#milstones)
             - [Epics](#epics)
             - [User Storeis in GitHub](#user-stories-in-github)
-- [Design](#design)
-    - [Wireframes](#wireframes)
-    - [Entity Relationsship Diagrams](#entity-relationship-diagrams)
+    - [Design](#design)
+        - [Wireframes](#wireframes)
+        - [Entity Relationsship Diagrams](#entity-relationship-diagrams)
 - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Database Used](#database-used)
@@ -189,9 +189,9 @@ You can access User Stories in Git Hub [here](https://github.com/SofiaNords/runn
 
 <img src="static/img/user_stories.png">
 
-#### Design
+### Design
 
-### Wireframes
+#### Wireframes
 
 <img src="static/img/wireframe_1.png">
 
@@ -209,7 +209,7 @@ You can access User Stories in Git Hub [here](https://github.com/SofiaNords/runn
 
 <img src="static/img/wireframe_8.png">
 
-### Entity Relationship Diagrams
+#### Entity Relationship Diagrams
 
 <img src="static/img/erd_1.png">
 
