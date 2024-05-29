@@ -261,6 +261,10 @@ The models that actually was created are the ones below. I realized during the p
 
 - A logged-in user can edit or delete their own comments.
 
+### Create a Running Story
+
+
+
 ## Technologies Used
 
 ### Languages Used
