@@ -21,7 +21,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
             - [User Storeis in GitHub](#user-stories-in-github)
     - [Design](#design)
         - [Wireframes](#wireframes)
-        - [Entity Relationsship Diagrams](#entity-relationship-diagrams)
+        - [Entity Relationsship Diagrams (ERD)](#entity-relationship-diagrams-erd)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
@@ -222,7 +222,13 @@ The models that actually was created are the ones below. I realized during the p
 
 ## Features
 
+### Home Page
 
+<img src="static/img/home-page.png">
+
+- The hero image welcomes the page visitor with a runner running in an inspiring environment.
+- The page visitors has direct access to the Running Stories below the hero image where they can read a excerpt that will give them a brief summary of the story. 
+- The visitor can click on an optional story and access the complete story.
 
 ## Technologies Used
 
