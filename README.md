@@ -22,6 +22,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
     - [Design](#design)
         - [Wireframes](#wireframes)
         - [Entity Relationsship Diagrams](#entity-relationship-diagrams)
+- [Features](#features)
 - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Database Used](#database-used)
@@ -209,11 +210,18 @@ You can access User Stories in Git Hub [here](https://github.com/SofiaNords/runn
 
 <img src="static/img/wireframe_8.png">
 
-#### Entity Relationship Diagrams
+#### Entity Relationship Diagrams (ERD)
+
+When I initially planned this project, I also intended to include a Questions and Answers section as you can see from the user stories. Therefore there are also models for Questions and Answers in my ERDs. 
 
 <img src="static/img/erd_1.png">
 
+The models that actually was created are the ones below. I realized during the project that the About model is redundant but I decided to keep it as it is part of my learning journey. 
+
 <img src="static/img/erd_2.png">
+
+## Features
+
 
 
 ## Technologies Used
