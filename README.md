@@ -237,6 +237,12 @@ The models that actually was created are the ones below. I realized during the p
 - A page visitor can view the full story and comments related to the story.
 - The page visitor can see that you have to log in to be able to leave a comment.
 
+### The About page
+
+<img src="static/img/about-page.png">
+
+- A page visitor or user can read about the website's purpose and get instructions in how to get started sharing stories and or leave comments on others stories.
+
 ### Register
 
 <img src="static/img/sign-up.png">
