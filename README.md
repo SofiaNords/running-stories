@@ -263,7 +263,15 @@ The models that actually was created are the ones below. I realized during the p
 
 ### Create a Running Story
 
+<img src="static/img/create-story.png">
 
+- A logged-in user can create a Running Story on the Share Story page.
+
+### Edit and Delete Running Story
+
+<img src="static/img/edit-story.png">
+
+- A logged-in user can edit or delete a story they have created themselves.
 
 ## Technologies Used
 
