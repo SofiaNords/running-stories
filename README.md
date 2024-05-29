@@ -1,10 +1,35 @@
-# Running Stories
+# Running Stories - Introduction
 
 A platform for runners to share their unique experiences, inspire one another, and build community. This is a Full Stack website built using the Django framework with full CRUD functionality. Users can share their stories and comment on others’ stories, expressing their passion for running.
 
 View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/).
 
 .... Add Am I responsive image
+
+## Table of Content
+
+- [Running Stories](#running-stories---introduction)
+- [Table of Content](#table-of-content)
+- [User Experience - UX](#user-experience---ux)
+    - [User Stories](#user-stories)
+    - [Project Planning](#project-planning)
+        - [Agile Methodologies](#agile-methodologies)
+            - [Kanban Board](#kanban-board)
+            - [MoSCoW Prioritization](#moscow-prioritization)
+            - [Milestones](#milstones)
+            - [Epics](#epics)
+            - [User Storeis in GitHub](#user-stories-in-github)
+- [Design](#design)
+    - [Wireframes](#wireframes)
+    - [Entity Relationsship Diagrams](#entity-relationship-diagrams)
+- [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Database Used](#database-used)
+    - [Frameworks and Libraries](#frameworks-and-libraries)
+    - [Tools & Programs](#tools--programs)
+- [Testing](#testing)
+- [Credits](#credits)
+    - [Code Used](#code-used)
 
 ## User Experience - UX
 
@@ -125,17 +150,17 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
     
     AC4 - There should be a way to identify stories that are still in draft mode.
 
-## Project planning
+### Project planning
 
-### Agile Methodologies 
+#### Agile Methodologies 
 
-#### Kanban Board
+##### Kanban Board
 
 I have used the [project board in Git Hub](https://github.com/users/SofiaNords/projects/5/views/1) for my project planning. It has helped me to get an overview of the project and to see the progress. Thanks to the MoSCoW method (see below), I realized quite early in the project that User Story 6, 7 and 8 would not be included in this release.
 
 <img src="static/img/kanban.png">
 
-#### MoSCoW Prioritization
+##### MoSCoW Prioritization
 
 The User Stories are labeled with one of the following categories according to the MoSCoW prioritization method:
 
@@ -147,22 +172,24 @@ The User Stories are labeled with one of the following categories according to t
 
 - Won’t Have (this time): Requirements that will not be included in the current version of the product.
 
-#### Milstones
+##### Milstones
 
 I also wanted to try using Milstones in Github Projects but realize now in retrospect that for a project of this size, a Kanban Board with User Stories and MoSCoW labels were enough.
 
 <img src="static/img/milstones.png">
 
-#### Epics
+##### Epics
 
 Even Epics felt a bit over-ambitious in this project but it has been educational to use it.
 <img src="static/img/epics.png">
 
-#### User Stories
+##### User Stories in GitHub
 
 You can access User Stories in Git Hub [here](https://github.com/SofiaNords/running-stories/issues). In the picture below you can see how I have labeled the User Stories with Epics, MoSCoW Prioritization and Milstones.
 
 <img src="static/img/user_stories.png">
+
+#### Design
 
 ### Wireframes
 

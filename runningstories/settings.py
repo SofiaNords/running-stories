@@ -32,7 +32,7 @@ SECRET_KEY = {
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-sofianords-runningstori-4js02sl7agk.ws-eu114.gitpod.io',
+    '8000-sofianords-runningstori-75kv15vvkqk.ws.codeinstitute-ide.net',
     '.herokuapp.com'
 ]
 
@@ -110,7 +110,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.gitpod.io",
+    "https://*.codeinstitute-ide.net",
     "https://*.herokuapp.com",
 ]
 
