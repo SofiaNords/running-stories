@@ -249,6 +249,17 @@ The models that actually was created are the ones below. I realized during the p
 
 - A registered user can sign in by filling in the Sign in form.
 
+### Comment on a Story
+
+<img src="static/img/leave-a-comment.png">
+
+- A logged-in user can leave a comment on a story.
+
+### Edit and Delete Comments
+
+<img src="static/img/edit-delete-comments.png">
+
+- A logged-in user can edit or delete their own comments.
 
 ## Technologies Used
 
