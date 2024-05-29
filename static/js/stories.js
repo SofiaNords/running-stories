@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Add event listeners for edit buttons
   for (let button of editButtons) {
     button.addEventListener("click", (e) => {
-      let storyId = e.target.dataset.story_id;
+      let storyId = e.target.getAttribute("data-story_id");
       let storyTitle = document.getElementById(`story${storyId}`).innerText;
       titleElement.value = storyTitle;
       let storyExcerpt = document.getElementById(`storyExcerpt${storyId}`).innerText;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Add event listeners for delete buttons
   for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
-      let storyId = e.target.dataset.story_id;
+      let storyId = e.target.getAttribute("data-story_id");
       deleteConfirm.href = `story_delete/${storyId}`;
       deleteModal.show();
     });
