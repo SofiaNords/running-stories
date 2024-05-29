@@ -4,7 +4,7 @@ A platform for runners to share their unique experiences, inspire one another, a
 
 View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/).
 
-.... Add Am I responsive image
+<img src="static/img/responsive.png">
 
 ## Table of Content
 
