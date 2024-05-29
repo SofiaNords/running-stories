@@ -33,7 +33,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-sofianords-runningstori-75kv15vvkqk.ws.codeinstitute-ide.net',
-    '.herokuapp.com/'
+    '.herokuapp.com'
 ]
 
 # Application definition
