@@ -230,6 +230,26 @@ The models that actually was created are the ones below. I realized during the p
 - The page visitors has direct access to the Running Stories below the hero image where they can read a excerpt that will give them a brief summary of the story. 
 - The visitor can click on an optional story and access the complete story.
 
+### View full Story
+
+<img src="static/img/story-detail.png">
+
+- A page visitor can view the full story and comments related to the story.
+- The page visitor can see that you have to log in to be able to leave a comment.
+
+### Register
+
+<img src="static/img/sign-up.png">
+
+- A page visitor can click on Register in the navigation menu and fill out the Sign up form.
+
+### Sign in
+
+<img src="static/img/sign-in.png">
+
+- A registered user can sign in by filling in the Sign in form.
+
+
 ## Technologies Used
 
 ### Languages Used
