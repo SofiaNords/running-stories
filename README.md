@@ -32,6 +32,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
     - [Edit and Delete Comments](#edit-and-delete-comments)
     - [Create a Running Story](#create-a-running-story)
     - [Edit and Delete a Running Story](#edit-and-delete-a-running-story)
+    - [Navigate and Logout](#navigate-and-logout)
 - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Database Used](#database-used)
@@ -287,6 +288,13 @@ The models that actually was created are the ones below. I realized during the p
 <img src="static/img/edit-story.png">
 
 - A logged-in user can edit or delete a story they have created themselves.
+
+### Navigate and Logout
+
+<img src="static/img/log-out.png">
+
+- A user can easily navigate on the website using the navigation menu.
+- A logged-in user can logout by clicking on the Logout link in the navigation menu and then confirm to Sign Out. 
 
 ## Technologies Used
 
