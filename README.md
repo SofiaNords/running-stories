@@ -21,6 +21,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
             - [User Storeis in GitHub](#user-stories-in-github)
     - [Design](#design)
         - [Wireframes](#wireframes)
+        - [Colour Scheme](#colour-scheme)
         - [Entity Relationsship Diagrams (ERD)](#entity-relationship-diagrams-erd)
 - [Features](#features)
     - [Hompe Page](#home-page)
@@ -39,6 +40,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
     - [Frameworks and Libraries](#frameworks-and-libraries)
     - [Tools & Programs](#tools--programs)
 - [Testing](#testing)
+- [Deployment](#deployment)
 - [Credits](#credits)
     - [Code Used](#code-used)
 
@@ -331,6 +333,112 @@ The models that actually was created are the ones below. I realized during the p
 ## Testing
 
 View testing User Stories [here.](https://docs.google.com/spreadsheets/d/16GrrTfA8aQ79KI6y7XLdAuZSGlR_fDgHIUbQLkWweuM/edit#gid=0)
+
+## Deployment
+
+The Running Stories platform is deployed on the Heroku platform and can be accessed here:
+https://running-stories-252b86d688ca.herokuapp.com/
+
+Fork the repository
+
+1. Go to the [GitHub repository](https://github.com/SofiaNords/running-stories).
+
+2. Click the button with FORK on it on your right hand side.
+
+3. A new page "Create new Fork" will open, you can also edit the name if you would like.
+
+4. At the bottom of the page - click on CREATE FORK.
+
+5. Now you have a copy of the project in your repositories.
+
+Clone the repository
+
+1. Go to the [GitHub repository](https://github.com/SofiaNords/running-stories).
+
+2. Click on the Code tab and copy the web URL.
+
+3. Open the terminal in the code editor of your choice, and change the current working directory to the one you will use to clone the repository.
+
+4. Type: "git clone" inte the terminal and then paste the link you copied before and press ENTER.
+
+
+Create the Heroku app
+
+1. Navigate to your Heroku dashboard and create a new app with a unique name.
+
+2. Click on the Settings tab and reveal the config vars and add a key of DISABLE_COLLECTSTATIC and a value of 1 and click Add. This step prevents Heroku from uploading static files during the build.
+
+Update your code for deployment
+
+3. Install a production-ready webserver for Heroku: pip3 install gunicorn~=20.1
+
+    and add gunicorn==20.1.0 to the requirements.txt file with: 
+    pip3 freeze --local > requirements.txt
+
+4. Create a file named Profile at the root directory of the project.
+
+5. In the Procfile, declare this is a web process followed by the command to execute your Django project: web: gunicorn runningstories.wsgi
+
+6. Open the runningstories/settings.py file and set DEBUG=False
+
+7. Add ,'.herokuapp.com' to the ALLOWED_HOSTS list in settings.py
+
+8. You can now git add the files you have modified, git commit them and push them to GitHub.
+
+Deploy on Heroku
+
+9. Click on the Deploy tab on Heroku dashboard.
+
+10. In the Deployment method section enable GitHub integration by clicking on Connect to GitHub. If you have not deployed a project from GitHub before then, you will be asked to authenticate with GitHub. 
+
+11. Choose the projects repository in the list that appears when you start typing into the search box.
+
+12. Scroll to the bottom of the page and click Deploy Branch to start a manual deployment of the main branch.
+
+13. Click on Open app to view your deployed project.
+
+14. Open the Resources tab and choose an eco dyno.
+
+Database and deployment
+
+1. Add following in your env.py file:
+
+    import os
+
+    os.environ.setdefault(
+        "DATABASE_URL", "<your-database-URL>")
+
+    os.environ.setdefault("SECRET_KEY", "<your_choice_of_secret_key>")
+
+2. Your settings.py file should look like this:
+
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+
+3. A secret key value should be set on Heroku as a Config Var named SECRET_KEY.
+
+Deployment with static files
+
+1. Install and setup the Python package: pip3 install whitenoise~=5.3.0
+
+2. Add the package to your requriements.txt file: pip3 freeze --local > requirements.txt
+
+3. Add WhiteNoise to Django's MIDDLEWARE in the runningstories/settings.py file directly after the Django SecurityMiddleware: 'whitenoise.middleware.WhiteNoiseMiddleware',
+
+4.  Also, in the codestar/settings.py file, add a STATIC_ROOT path: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+5. Run the collectstatic command in the terminal to collect the static files into a staticfiles directory: python3 manage.py collectstatic
+
+6. Check the Python version used in your IDE and look up the supported runtimes and copy the closest to the one used in you IDE.
+
+7. Add a runtime.txt file to your app's root directory and add the Python version you copied from the list of supported runtimes in it. 
+
+8. Set DEBUG to False. Git add, commit and push the code to GitHub.
+
+9. Return to Heroku dashboard and click on the Settings tab and Reveal config vars button. Remove the DISABLE_COLLECTSTATIC key/value pair.
+
+10. Click on the Deploy tab, scroll down, choose the main bransch and press Deploy Branch.
+
+
 
 ## Credits
 
