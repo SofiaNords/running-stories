@@ -43,6 +43,8 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 - [Deployment](#deployment)
 - [Credits](#credits)
     - [Code Used](#code-used)
+    - [Inspiration](#inspiration)
+    - [Acknowledgements](#acknowledgements)
 
 ## User Experience - UX
 
@@ -463,6 +465,6 @@ Deployment with static files
 
 ### Acknowledgements
 
-Thank you to my mentor Spencer Barribal for all the good advices and the encouragement during the process.
+- Thank you to my mentor Spencer Barribal for all the good advices and the encouragement during the process.
 
-Thank you to my facilitator Kristyna Wach at Code Institute for the support and commitment.
+- Thank you to my facilitator Kristyna Wach at Code Institute for the support and commitment.
