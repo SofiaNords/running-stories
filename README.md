@@ -220,6 +220,14 @@ You can access User Stories in Git Hub [here](https://github.com/SofiaNords/runn
 
 <img src="static/img/wireframe_8.png">
 
+#### Colour Scheme
+
+<img src="static/img/hero_image_1.webp">
+
+I captured the following colours from the hero image and used the blue one for the background and the green one for the buttons. 
+
+<img src="static/img/colour-scheme.png">
+
 #### Entity Relationship Diagrams (ERD)
 
 When I initially planned this project, I also intended to include a Questions and Answers section as you can see from the user stories. Therefore there are also models for Questions and Answers in my ERDs. 
