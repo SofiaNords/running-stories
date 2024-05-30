@@ -23,6 +23,15 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
         - [Wireframes](#wireframes)
         - [Entity Relationsship Diagrams (ERD)](#entity-relationship-diagrams-erd)
 - [Features](#features)
+    - [Hompe Page](#home-page)
+    - [View full story](#view-full-story)
+    - [The About page](#the-about-page)
+    - [Register](#register)
+    - [Sign In](#sign-in)
+    - [Comment on a Story](#comment-on-a-story)
+    - [Edit and Delete Comments](#edit-and-delete-comments)
+    - [Create a Running Story](#create-a-running-story)
+    - [Edit and Delete a Running Story](#edit-and-delete-a-running-story)
 - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Database Used](#database-used)
@@ -271,9 +280,9 @@ The models that actually was created are the ones below. I realized during the p
 
 <img src="static/img/create-story.png">
 
-- A logged-in user can create a Running Story on the Share Story page.
+- A logged-in user can create a Running Story on the Share Story page. The user can create a draft that is only visible for that user under My Stories. When the user changes status to Published the story will become visible on the Home Page.
 
-### Edit and Delete Running Story
+### Edit and Delete a Running Story
 
 <img src="static/img/edit-story.png">
 
