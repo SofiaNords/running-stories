@@ -453,5 +453,16 @@ Deployment with static files
 
 ### Code Used
 
+- The structure and the code of the project was based on the "I think Therefore I Blog" walkthrough by Code Institute. 
 - [How to keep your footer where it belongs?](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) by Dominic Fraser. I followed Dominics instruction for the placement of the footer.
 
+### Inspiration
+
+- I was inspired by Raneem Yads User Story Template for my User Stories.
+- The Facebook group Löpning - gruppen för oss om fattat att löpning är livet (Running - the group for us to understand that running is life) gave me the idea to the project.
+
+### Acknowledgements
+
+Thank you to my mentor Spencer Barribal for all the good advices and the encouragement during the process.
+
+Thank you to my facilitator Kristyna Wach at Code Institute for the support and commitment.
