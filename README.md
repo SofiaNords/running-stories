@@ -311,24 +311,33 @@ The models that actually was created are the ones below. I realized during the p
 ### Languages Used
 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Database Used
 
 - [PostgreSQL](https://dbs.ci-dbs.net/manage/) - Used to store the data
 
-### Frameworks and Libraries
+### Frameworks, Libraries, Tools & Programs
 
+- [Balsamiq](https://balsamiq.cloud/) - Used to create wireframes
 - [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - Used to design the website and make it responsive
 - [Crispy Bootstrap](https://pypi.org/project/crispy-bootstrap5/) - Used to create and style forms
 - [Django](https://www.djangoproject.com/) - Used for rapid, reusable and secure development
 - [Django allauth](https://docs.allauth.org/) - Used for account registration and authentication
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/) - Used to control the rendering behavior of my Django forms in a elegant and DRY way
-
-
-### Tools & Programs
-
-- [Balsamiq](https://balsamiq.cloud/) - Used to create wireframes
+- [dj-database-url](https://pypi.org/project/dj-database-url/) - Used to configure the application and define the database connection in an url
+- [Django Summernote](https://pypi.org/project/django-summernote/) - Used as a editor in Admin
+- [Git](https://git-scm.com/) - Used for version control
+- [GitHub](https://github.com/) - Used to store the code
+- [GitPod](https://www.gitpod.io/) - Used as the IDE for development
+- [Heroku](https://dashboard.heroku.com/) - Used to deploy the project
+- [Font Awesome](https://fontawesome.com/) - Used for social media icons
+- [Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) - Used as the Web Server to run Django on Heroku
 - [Lucidchart](https://www.lucidchart.com/) - Used to create Entity Relationship Diagrams (ERD)
+- [Psycopg](https://pypi.org/project/psycopg2/) - Used as a database adapter to support the connection to database
+- [Whitenoise](https://pypi.org/project/whitenoise/) - Used to handle static files
 
 ## Testing
 
