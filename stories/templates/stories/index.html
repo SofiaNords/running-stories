@@ -2,14 +2,12 @@
 {% load static %}
 
 {% block content %}
-
-<!-- story_list.html content starts here -->
+<!-- This block contains the main content -->
 <div class="container-fluid">
     <div class="row">
 
         <img src="{% static 'img/hero_image_1.webp' %}" alt="A man running in the Alps">
 
-        <!-- Story Entries Column -->
         <div class="col-12 mt-4 left">
             <div class="row">
                 {% for story in story_list %}
@@ -17,7 +15,9 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <a href="{% url 'story_detail' story.slug %}" class="story-link">
+                                <!-- Display the story title and author -->
                                 <h2 class="card-title">{{ story.title }} | {{ story.author }}</h2>
+                                <!-- Display a brief excerpt of the story -->
                                 <p class="card-text">{{ story.excerpt }}</p>
                             </a>
                         </div>
@@ -27,6 +27,7 @@
             </div>
         </div>
     </div>
+    <!-- Pagination links for navigating between pages -->
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <li class="button">
@@ -40,5 +41,5 @@
         {% endif %}
     </ul>
 </div>
-
+<!-- End of main content block -->
 {% endblock %}

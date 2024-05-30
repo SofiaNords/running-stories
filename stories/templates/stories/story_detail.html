@@ -3,24 +3,26 @@
 {% load static %}
 
 {% block content %}
-
+<!-- This block contains the main content -->
 <div class="container">
     <div class="row">
         <div class="col-md-7 mt-4">
-            <!-- Story title goes in these h3 tags -->
+            <!-- Display story title and author -->
             <h3 class="story-title">"{{ story.title }}" by {{ story.author }}</h3>
+            <!-- Display story excerpt -->
             <p>
                 {{ story.excerpt | safe }}
             </p>
+            <!-- Display full story content -->
             <p class="card-text">
                 {{ story.content | safe }}
             </p>
         </div>
         <div class="col-md-1"></div>
-        <!-- Creating New Comments -->
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
+                <!-- Form for leaving a comment -->
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form id="commentForm" method="post" style="margin-top: 1.3em;">
@@ -33,13 +35,11 @@
                 {% endif %}
             </div>
         </div>
-        <!-- Displaying Comments -->
         <div class="row">
             <div class="col-md-8 card mb-4  mt-3 ">
+                <!-- Display comments -->
                 <h3>Comments:</h3>
                 <div class="card-body">
-                    <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
                     {% for comment in comments %}
                     <div class="p-2 comments">
                         <p class="font-weight-bold">
@@ -52,19 +52,18 @@
                             {{ comment.body | linebreaks }}
                         </div>
                         {% if user.is_authenticated and comment.author == user %}
+                        <!-- Buttons for deleting and editing comments -->
                         <button class="btn btn-delete btn-danger" comment_id="{{ comment.id }}">Delete</button>
                         <button class="btn btn-edit btn-secondary" comment_id="{{ comment.id }}">Edit</button>
                         {% endif %}
                     </div>
-                    <!-- Our for loop ends here -->
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Delete confirmation modal -->
+<!-- Modal for confirming comment deletion -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -84,9 +83,10 @@
         </div>
     </div>
 </div>
-
+<!-- End of main content block -->
 {% endblock %}
 
 {% block extras %}
+<!-- Include JavaScript file for comment functionality -->
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}

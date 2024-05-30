@@ -3,15 +3,14 @@
 {% load static %}
 
 {% block content %}
-
-<!-- share_story.html content starts here -->
+<!-- This block contains the main content -->
 <div class="container-fluid">
   <div class="row">
     <div class="col-12">
       <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-5">
-          <!-- Share your Story -->
+          <!-- Form for sharing a story -->
           <h1>Share your Story!</h1>
           <form id="storyForm" method="post">
             {{ share_form | crispy }}
@@ -23,17 +22,22 @@
           </form>
         </div>
         <div class="col-lg-5">
-          <!-- My Stories -->
+          <!-- Display user's stories -->
           <h1>My stories</h1>
           {% for story in my_stories %}
           {% if story.author == user %}
           <div>
             <div class="card mb-2">
               <div class="card-body">
+                <!-- Display story title -->
                 <h2 id="story{{ story.id }}" class="card-title">{{ story.title }}</h2>
+                <!-- Display story excerpt -->
                 <p id="storyExcerpt{{ story.id }}" class="card-text">{{ story.excerpt }}</p>
+                <!-- Display full story content -->
                 <p id="storyContent{{ story.id }}" class="card-text">{{ story.content }}</p>
+                <!-- Display creation date -->
                 <p>Created: {{ story.created_on }}</p>
+                <!-- Display story status (draft or published) -->
                 {% if story.status == 0 %}
                 <p>Draft</p>
                 {% else %}
@@ -42,6 +46,7 @@
               </div>
             </div>
             <div class="mb-4 text-center">
+              <!-- Buttons for deleting and editing stories -->
               <button class="btn btn-delete btn-danger" data-story_id="{{ story.id }}">Delete</button>
               <button class="btn btn-edit btn-secondary" data-story_id="{{ story.id }}">Edit</button>
             </div>
@@ -54,7 +59,7 @@
     </div>
   </div>
 </div>
-<!-- Delete confirmation modal -->
+<!-- Modal for confirming story deletion -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -74,9 +79,10 @@
     </div>
   </div>
 </div>
-
+<!-- End of main content block -->
 {% endblock %}
 
 {% block extras %}
+<!-- Include JavaScript file for story functionality -->
 <script src="{% static 'js/stories.js' %}"></script>
 {% endblock %}
