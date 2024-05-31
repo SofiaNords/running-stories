@@ -40,6 +40,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
     - [Frameworks and Libraries](#frameworks-and-libraries)
     - [Tools & Programs](#tools--programs)
 - [Testing](#testing)
+- [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits](#credits)
     - [Code Used](#code-used)
@@ -355,6 +356,16 @@ My test document, which you can navigate to below, consists of the following tab
 - Lighthouse (Testing performance, accessibility, progressive web apps and SEO)
 
 View testing document [here.](https://docs.google.com/spreadsheets/d/16GrrTfA8aQ79KI6y7XLdAuZSGlR_fDgHIUbQLkWweuM/edit#gid=0)
+
+## Bugs
+
+I had a Runtime Error in my Terminal and discussed it with my mentor. We solved it by adding APPEND_SLASH to False in settings.py. 
+
+<img src="static/img/append-slash.png">
+
+Because of this I discovered another problem when I was trying to enter the admin page. I had to append a slash to get to the admin page. Tutor Assistance helped me to change the settings in urls.py where we removed the slash from the admin path.
+
+<img src="static/img/path-admin.png">
 
 ## Deployment
 
