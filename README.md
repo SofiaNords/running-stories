@@ -44,7 +44,7 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 - [Credits](#credits)
     - [Code Used](#code-used)
     - [Inspiration](#inspiration)
-    - [Acknowledgements](#acknowledgements)
+    - [Acknowledgements](#acknowledgements)   
 
 ## User Experience - UX
 
@@ -171,7 +171,9 @@ View the full website [here](https://running-stories-252b86d688ca.herokuapp.com/
 
 ##### Kanban Board
 
-I have used the [project board in Git Hub](https://github.com/users/SofiaNords/projects/5/views/1) for my project planning. It has helped me to get an overview of the project and to see the progress. Thanks to the MoSCoW method (see below), I realized quite early in the project that User Story 6, 7 and 8 would not be included in this release.
+I have used the [project board in Git Hub](https://github.com/users/SofiaNords/projects/5/views/1) for my project planning. It has helped me to get an overview of the project and to see the progress. Thanks to the MoSCoW method (see below), I realized quite early in the project that User Story 6, 7 and 8 would not be included in this release. 
+
+One of my strategies in this project has been to first focus on functionality and then spend time on design, as it is easy for time to run out when I am working on design. Therefore, I chose to add a special column called “Ready for Design” as the last step before testing.
 
 <img src="static/img/kanban.png">
 
@@ -343,7 +345,16 @@ The models that actually was created are the ones below. I realized during the p
 
 ## Testing
 
-View testing User Stories [here.](https://docs.google.com/spreadsheets/d/16GrrTfA8aQ79KI6y7XLdAuZSGlR_fDgHIUbQLkWweuM/edit#gid=0)
+My test document, which you can navigate to below, consists of the following tabs:
+
+- User Stories (Testing User Stories and their Acceptance Criterias)
+- CI Python Linter (Testing Python code)
+- JSHint (Testing javaScript code)
+- W3C Markup Validation Service (Testing HTML code)
+- W3C CSS Validation Service (Testing CSS code)
+- Lighthouse (Testing performance, accessibility, progressive web apps and SEO)
+
+View testing document [here.](https://docs.google.com/spreadsheets/d/16GrrTfA8aQ79KI6y7XLdAuZSGlR_fDgHIUbQLkWweuM/edit#gid=0)
 
 ## Deployment
 
@@ -461,10 +472,10 @@ Deployment with static files
 ### Inspiration
 
 - I was inspired by Raneem Yads User Story Template for my User Stories.
-- The Facebook group Löpning - gruppen för oss om fattat att löpning är livet (Running - the group for us to understand that running is life) gave me the idea to the project.
+- The Facebook group "Löpning - gruppen för oss om fattat att löpning är livet" ("Running - the group for us to understand that running is life") gave me the idea to the project.
 
 ### Acknowledgements
 
-- Thank you to my mentor Spencer Barribal for all the good advices and the encouragement during the process.
+- I’d like to express my gratitude to my mentor, Spencer Barribal, for all the valuable advice and encouragement throughout the process.
 
-- Thank you to my facilitator Kristyna Wach at Code Institute for the support and commitment.
+- Thank you to my facilitator Kristyna Wach at Code Institute for your support and commitment.
